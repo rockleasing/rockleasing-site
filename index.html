@@ -410,7 +410,14 @@
     .optional { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
     .consent-check { display: flex; grid-template-columns: auto 1fr; align-items: flex-start; gap: 10px; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.45; }
     .consent-check input { width: 16px; height: 16px; margin: 2px 0 0; flex: 0 0 auto; }
-    .consent-check a, .privacy-note a, .footer__link { color: var(--red); text-decoration: underline; }
+    .consent-check a, .privacy-note a, .footer__link {
+      color: var(--red);
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
+    }
     .privacy-note { grid-column: 1 / -1; color: var(--muted); font-size: 11px; margin: -4px 0 0; }    /* Graphite background theme */
     :root { --paper: #2d3237; --muted: #c0c5c9; --line: #4b535a; }
     body { background: var(--paper); color: #f7f7f5; }
@@ -638,8 +645,8 @@
           <label>Номер телефона<input type="tel" name="phone" placeholder="+7 999 000 00 00" autocomplete="tel" required></label>
           <label>ИНН организации или ИП<input type="text" name="inn" placeholder="10 или 12 цифр" inputmode="numeric" minlength="10" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" required></label>
           <label>Что хотите приобрести? <span class="optional">необязательно</span><textarea name="message" placeholder="Например: грузовой автомобиль или оборудование"></textarea></label>
-          <label class="consent-check"><input type="checkbox" name="business_consent" required><span>Я даю отдельное <a href="consent-business.html" target="_blank">согласие представителя организации/ИП</a> на обработку и передачу данных для подбора и сравнения предложений.</span></label>
-          <p class="privacy-note">Порядок обработки и защиты данных описан в <a href="privacy.html" target="_blank">Политике обработки персональных данных</a>.</p>
+          <label class="consent-check"><input type="checkbox" name="business_consent" required><span>Я даю отдельное <a href="consent-business.html" target="_blank" rel="noopener noreferrer" aria-label="Открыть согласие представителя организации или ИП">согласие представителя организации/ИП</a> на обработку и передачу данных для подбора и сравнения предложений.</span></label>
+          <p class="privacy-note">Порядок обработки и защиты данных описан в <a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="Открыть политику обработки персональных данных">Политике обработки персональных данных</a>.</p>
           <button class="button button--red" type="submit">Получить консультацию <span>→</span></button>
           <p class="form-message" role="status">Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
         </form>
