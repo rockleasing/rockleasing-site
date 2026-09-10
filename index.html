@@ -262,6 +262,39 @@
 
     .form-section { background: var(--white); }
     .form-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+    .reviews-block { margin-top: 72px; }
+    .reviews-block .section-title { margin: 0 0 28px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .review-card {
+      position: relative;
+      min-height: 220px;
+      padding: 30px;
+      border-left: 4px solid var(--red);
+      background: var(--paper);
+      color: var(--ink);
+      counter-increment: reviews;
+    }
+    .reviews-grid { counter-reset: reviews; }
+    .review-card:before {
+      content: counter(reviews, decimal-leading-zero);
+      position: absolute;
+      top: -21px;
+      left: -21px;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      font: 700 15px/1 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    }
+    .review-card p { margin: 0 0 22px; color: #42464a; font-size: 15px; }
+    .review-card strong { display: block; color: var(--red); font: 700 18px/1 'Roboto Condensed', 'Arial Narrow', sans-serif; text-transform: uppercase; }
+    @media (max-width: 800px) {
+      .reviews-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
     .form-wrap .section-title { max-width: 430px; }
     .form-intro { color: var(--muted); max-width: 360px; margin: 22px 0 0; }
     form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -571,6 +604,24 @@
         <div>
           <p class="hero__lead" style="margin-top:0">Я Андрей Ледяев. 16 лет помогаю компаниям и предпринимателям оформлять транспорт, спецтехнику и оборудование в лизинг.</p>
           <p class="form-intro">Не передаю вас менеджеру и не исчезаю после одобрения. Работаю с клиентами по всей России, а лично нахожусь в Тольятти.</p>
+        </div>
+      </div>
+      <div class="container reviews-block">
+        <div class="eyebrow">Отзывы клиентов</div>
+        <h3 class="section-title">Что отмечают<br><span style="color:var(--red)">клиенты</span></h3>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <p>Разобрались с непростой импортной машиной, подготовили документы и довели сделку до выдачи в Москве.</p>
+            <strong>RAM 1500 · частный импорт</strong>
+          </article>
+          <article class="review-card">
+            <p>Сравнили варианты и графики, быстро согласовали решение: договор подписали в конце года, а автомобиль получили уже на следующий день.</p>
+            <strong>HAVAL H9 · автомобиль для бизнеса</strong>
+          </article>
+          <article class="review-card">
+            <p>Проверили оборудование, организовали доставку, монтаж и запуск производства — от первой консультации до результата в одном сопровождении.</p>
+            <strong>Производственная линия · оборудование</strong>
+          </article>
         </div>
       </div>
     </section>
