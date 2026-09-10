@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Гоночный болид РОК-ЛИЗИНГ</title>
+  <desc id="desc">Красно-графитовый гоночный болид с логотипом РОК-ЛИЗИНГ</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f84046"/>
+      <stop offset=".48" stop-color="#d60f18"/>
+      <stop offset="1" stop-color="#780910"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#59636b"/>
+      <stop offset=".5" stop-color="#15191c"/>
+      <stop offset="1" stop-color="#08090a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#050607" flood-opacity=".55"/>
+    </filter>
+  </defs>
+  <ellipse cx="465" cy="532" rx="325" ry="32" fill="#08090a" opacity=".42"/>
+  <g filter="url(#shadow)" transform="rotate(-4 450 330)">
+    <path d="M90 421c53-22 91-61 140-112 42-44 94-73 174-87l167-29c48-8 90 9 123 45l54 58 57 30c20 11 30 28 30 52v37c0 22-18 40-40 40h-44c-9-50-45-79-91-79-48 0-83 28-94 79H322c-11-51-47-79-94-79-48 0-84 29-94 79H91c-17 0-28-14-25-31z" fill="url(#body)" stroke="#101214" stroke-width="9"/>
+    <path d="M337 221c49-39 95-59 160-70l75-13c42-7 79 4 110 32l38 34-55 22-88-4-128 27-118 4z" fill="#b60d15" stroke="#101214" stroke-width="8"/>
+    <path d="M423 177c35-18 65-27 101-33l49-8c25-4 48 1 67 14l32 23-34 19-85-3-101 20z" fill="url(#glass)" stroke="#101214" stroke-width="7"/>
+    <path d="M498 148l-18 58M594 131l-5 75" stroke="#8c969d" stroke-width="4" opacity=".5"/>
+    <path d="M112 383c50-18 95-24 151-22l53 2-7 44H96z" fill="#f11920"/>
+    <path d="M696 362c58-2 104 5 145 23l20 21h-170z" fill="#f11920"/>
+    <path d="M103 426h102M680 426h123" stroke="#e9edf0" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="228" cy="429" r="65" fill="#090a0b" stroke="#3d454b" stroke-width="10"/>
+    <circle cx="228" cy="429" r="31" fill="#aeb6bb"/><circle cx="228" cy="429" r="14" fill="#15191c"/>
+    <circle cx="692" cy="429" r="65" fill="#090a0b" stroke="#3d454b" stroke-width="10"/>
+    <circle cx="692" cy="429" r="31" fill="#aeb6bb"/><circle cx="692" cy="429" r="14" fill="#15191c"/>
+    <path d="M278 348h337l45 24-42 27H277z" fill="#101214" opacity=".75"/>
+    <path d="M383 351h177" stroke="#f5f6f6" stroke-width="3" opacity=".55"/>
+    <path d="M410 283h177" stroke="#fff" stroke-width="3" opacity=".35"/>
+    <text x="388" y="389" fill="#fff" font-family="Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="2">РОК-ЛИЗИНГ</text>
+    <path d="M83 398l-44 17 47 12 42-15zM806 398l51 17-48 12-44-15z" fill="#f11920" stroke="#101214" stroke-width="7"/>
+    <path d="M111 467h-42l-28 26h93M785 467h42l28 26h-93" fill="none" stroke="#101214" stroke-width="13" stroke-linecap="round"/>
+  </g>
+</svg>
