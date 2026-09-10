@@ -394,7 +394,7 @@
     .cases__grid { gap: 16px; }
     .case { background: var(--white); border: 0; border-left: 4px solid var(--red); padding: 30px; transition: transform .2s ease; cursor: pointer; }
     .case:hover { transform: translateY(-4px); }
-    .case__image { height: 150px; margin: -30px -30px 20px; width: calc(100% + 60px); object-fit: cover; object-position: center; filter: saturate(.9); }
+    .case__image { height: 110px; margin: -30px -30px 20px; width: calc(100% + 60px); object-fit: contain; object-position: center; background: var(--white); filter: saturate(.9); }
     .case__meta { font-size: 12px; color: var(--muted); }
     .case__meta strong { color: var(--red); font-weight: 700; }
     .process { background: var(--ink); }
@@ -443,7 +443,7 @@
       .container { width: min(100% - 32px, 620px); }
       .hero__grid { min-height: auto; padding: 85px 0 105px; }
       .visual-card { box-shadow: 14px 14px 0 var(--red); }
-      .case__image { height: 135px; }
+      .case__image { height: 90px; }
       section { padding: 82px 0; }
     }    .cases__channel { display: inline-block; color: var(--red); font-weight: 700; margin-top: 16px; }
     .optional { color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
