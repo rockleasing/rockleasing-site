@@ -401,6 +401,38 @@
     input, textarea { border: 1px solid var(--line); border-radius: 0; background: rgba(255,255,255,.55); font-family: 'Onest', Arial, sans-serif; }
     input:focus, textarea:focus { border-color: var(--red); box-shadow: none; background: var(--white); }
     footer { background: var(--ink); }
+    .hero-collage {
+      width: min(100%, 500px);
+      aspect-ratio: 1 / 1.08;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px;
+      padding: 6px;
+      background: var(--red);
+      transform: rotate(2deg);
+      box-shadow: 18px 18px 0 #25282b;
+      overflow: hidden;
+    }
+    .hero-collage__tile {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      filter: saturate(.88) contrast(1.04);
+    }
+    .hero-collage__tile--suv { grid-row: span 2; background-image: url('hero-images/hero-suv.jpg'); background-position: 58% center; }
+    .hero-collage__tile--jaecoo { background-image: url('hero-images/hero-jaecoo.jpg'); background-position: 48% center; }
+    .hero-collage__tile--machine { background-image: url('hero-images/hero-machine.jpg'); background-position: 44% center; }
+    .hero-collage__tile--ram { display: none; }
+    .hero-collage__tile:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(16,18,20,.05), rgba(16,18,20,.2));
+      pointer-events: none;
+    }
     @media (max-width: 800px) {
       .container { width: min(100% - 32px, 620px); }
       .hero__grid { min-height: auto; padding: 85px 0 105px; }
@@ -510,13 +542,12 @@
             <a class="button button--red" href="#request">Получить предложение <span>→</span></a>
             <a class="button button--light" href="#services">Наши решения</a>
           </div>
-          <p class="hero__note">Первичная консультация — бесплатно</p>
         </div>
         <div class="hero__visual" aria-hidden="true">
-          <div class="visual-card">
-            <div class="visual-card__label">РОК-ЛИЗИНГ / 01</div>
-            <h2>Ваш актив.<br>Наши<br>решения.</h2>
-            <div class="visual-card__number">01 — 04</div>
+          <div class="hero-collage">
+            <div class="hero-collage__tile hero-collage__tile--suv"></div>
+            <div class="hero-collage__tile hero-collage__tile--jaecoo"></div>
+            <div class="hero-collage__tile hero-collage__tile--machine"></div>
           </div>
         </div>
       </div>
