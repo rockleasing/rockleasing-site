@@ -419,8 +419,11 @@
       min-width: 0;
       overflow: hidden;
       background-position: center;
-      background-size: cover;
-      filter: saturate(.88) contrast(1.04);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: rgba(16,18,20,.88);
+      filter: saturate(.84) contrast(1.02);
+      opacity: .96;
     }
     .hero-collage__tile--suv { grid-row: span 2; background-image: url('hero-images/hero-suv.jpg'); background-position: 58% center; }
     .hero-collage__tile--jaecoo { background-image: url('hero-images/hero-jaecoo.jpg'); background-position: 48% center; }
