@@ -262,6 +262,7 @@
     .step p { color: #999; font-size: 14px; margin: 0; }
 
     .form-section { background: var(--white); }
+    .reviews-section { background: var(--paper); }
     .form-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
     .reviews-block { margin-top: 72px; }
     .reviews-block .section-title { margin: 0 0 28px; }
@@ -293,6 +294,8 @@
     }
     .review-card p { margin: 0 0 22px; color: #42464a; font-size: 15px; }
     .review-card strong { display: block; color: var(--red); font: 700 18px/1 'Roboto Condensed', 'Arial Narrow', sans-serif; text-transform: uppercase; }
+    .reviews-channel { display: inline-flex; margin-top: 34px; padding: 16px 24px; background: var(--red); color: var(--white); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .reviews-channel:hover { background: var(--red-dark); }
     @media (max-width: 800px) {
       .reviews-grid { grid-template-columns: 1fr; gap: 28px; }
     }
@@ -525,6 +528,7 @@
         <a href="#cases">Кейсы</a>
         <a href="#process">Как работаем</a>
         <a href="#about">Обо мне</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#request">Заявка</a>
       </nav>
       <a class="nav__phone" href="tel:+79272173685">
@@ -641,9 +645,17 @@
           <p class="form-intro">Не передаю вас менеджеру и не исчезаю после одобрения. Работаю с клиентами по всей России, а лично нахожусь в Тольятти.</p>
         </div>
       </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
       <div class="container reviews-block">
-        <div class="eyebrow">Отзывы клиентов</div>
-        <h3 class="section-title">Что отмечают<br><span style="color:var(--red)">клиенты</span></h3>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Отзывы клиентов</div>
+            <h2 class="section-title">Что отмечают<br><span style="color:var(--red)">клиенты</span></h2>
+          </div>
+          <p class="section-copy">Больше отзывов и историй клиентов — в Telegram-канале РОК-ЛИЗИНГ.</p>
+        </div>
         <div class="reviews-grid">
           <article class="review-card">
             <p>Разобрались с непростой импортной машиной, подготовили документы и довели сделку до выдачи в Москве.</p>
@@ -658,6 +670,7 @@
             <strong>Производственная линия · оборудование</strong>
           </article>
         </div>
+        <a class="reviews-channel" href="https://t.me/rockleasing" target="_blank" rel="noopener noreferrer">БОЛЬШЕ ОТЗЫВОВ В TELEGRAM-КАНАЛЕ →</a>
       </div>
     </section>
 
