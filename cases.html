@@ -19,7 +19,7 @@
     .cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;counter-reset:projects}
     .case{display:block;position:relative;border-left:4px solid var(--red);padding:0 30px 30px;background:var(--white);color:var(--ink);text-decoration:none;counter-increment:projects}
     .case:before{content:counter(projects,decimal-leading-zero);position:absolute;top:-21px;left:-21px;width:42px;height:42px;display:grid;place-items:center;border:3px solid var(--paper);border-radius:50%;background:var(--red);color:#fff;z-index:2;font:700 15px/1 "Roboto Condensed",Arial Narrow,sans-serif}
-    .case img{display:block;width:calc(100% + 60px);height:150px;object-fit:cover;margin:0 -30px 20px}
+    .case img{display:block;width:100%;height:110px;object-fit:contain;object-position:left center;background:var(--paper);margin:0 0 20px}
     .case h2{font:700 31px/1 "Roboto Condensed",Arial Narrow,sans-serif;text-transform:uppercase;margin:0 0 10px}
     .meta{color:var(--red);font-size:12px;font-weight:700;margin:0 0 16px}.desc{color:#64676a;font-size:15px;margin:0}
     .telegram-button{display:inline-flex;margin-top:46px;padding:16px 24px;background:var(--red);color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
