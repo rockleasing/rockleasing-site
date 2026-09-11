@@ -214,8 +214,9 @@
       transition: transform .2s ease, box-shadow .2s ease;
     }
     .card:hover { transform: translateY(-5px); box-shadow: 0 16px 32px rgba(0,0,0,.07); }
+    .card__image { display: block; width: calc(100% + 60px); height: 118px; margin: -30px -30px 22px; object-fit: cover; object-position: center; filter: saturate(.9); }
     .card__icon { color: var(--red); font-size: 27px; font-weight: 900; }
-    .card h3 { font-size: 21px; letter-spacing: -.04em; margin: 46px 0 10px; }
+    .card h3 { font-size: 21px; letter-spacing: -.04em; margin: 0 0 10px; }
     .card p { color: var(--muted); font-size: 14px; margin: 0; }
     .card__line { width: 34px; height: 3px; background: var(--red); position: absolute; left: 30px; bottom: 30px; }
 
@@ -574,30 +575,35 @@
         </div>
         <div class="cards">
           <article class="card">
+            <img class="card__image" src="case-images/case-45.jpg" alt="Грузовой тягач">
             <div class="card__icon">01 /</div>
             <h3>Грузовой транспорт</h3>
             <p>Тягачи, прицепы, фургоны и коммерческие автомобили для задач бизнеса.</p>
             <div class="card__line"></div>
           </article>
           <article class="card">
+            <img class="card__image" src="case-images/case-33.jpg" alt="Фронтальный погрузчик">
             <div class="card__icon">02 /</div>
             <h3>Спецтехника</h3>
             <p>Дорожная, строительная, складская и сельскохозяйственная техника.</p>
             <div class="card__line"></div>
           </article>
           <article class="card">
+            <img class="card__image" src="case-images/case-39.jpg" alt="Легковой автомобиль">
             <div class="card__icon">03 /</div>
             <h3>Легковые автомобили</h3>
             <p>Новые и автомобили с пробегом для рабочих и коммерческих задач.</p>
             <div class="card__line"></div>
           </article>
           <article class="card">
+            <img class="card__image" src="case-images/case-66.jpg" alt="Производственное оборудование">
             <div class="card__icon">04 /</div>
             <h3>Оборудование</h3>
             <p>Новое и бывшее в эксплуатации производственное оборудование.</p>
             <div class="card__line"></div>
           </article>
           <article class="card">
+            <img class="card__image" src="case-images/case-64.jpg" alt="Коммерческий объект">
             <div class="card__icon">05 /</div>
             <h3>Недвижимость</h3>
             <p>Коммерческие объекты для развития и масштабирования бизнеса.</p>
