@@ -214,6 +214,14 @@
       transition: transform .2s ease, box-shadow .2s ease;
     }
     .card:hover { transform: translateY(-5px); box-shadow: 0 16px 32px rgba(0,0,0,.07); }
+    .card { overflow: hidden; }
+    .card:before { content: ""; position: absolute; inset: 0; background-position: center; background-repeat: no-repeat; background-size: contain; opacity: .22; pointer-events: none; }
+    .card:nth-child(1):before { background-image: url('category-images/cargo.png'); }
+    .card:nth-child(2):before { background-image: url('category-images/special-equipment.jpg'); }
+    .card:nth-child(3):before { background-image: url('category-images/passenger.jpg'); }
+    .card:nth-child(4):before { background-image: url('category-images/equipment.jpg'); }
+    .card:nth-child(5):before { background-image: url('category-images/real-estate.jpg'); }
+    .card > * { position: relative; z-index: 1; }
     .card__icon { color: var(--red); font-size: 27px; font-weight: 900; }
     .card h3 { font-size: 21px; letter-spacing: -.04em; margin: 46px 0 10px; }
     .card p { color: var(--muted); font-size: 14px; margin: 0; }
