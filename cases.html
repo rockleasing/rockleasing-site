@@ -17,6 +17,8 @@
     .header-actions{display:flex;align-items:center;gap:18px}
     .apply-button{display:inline-flex;align-items:center;padding:13px 18px;background:var(--red);color:#fff;text-decoration:none;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
     .apply-button:hover{background:#c91017}
+    .contact-button{display:inline-flex;align-items:center;padding:11px 12px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+    .contact-button:hover{border-color:var(--red);color:var(--red)}
     main{padding:90px 0}.eyebrow{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
     h1{font:700 clamp(52px,8vw,100px)/.9 "Roboto Condensed",Arial Narrow,sans-serif;text-align:left;text-transform:uppercase;letter-spacing:-.04em;margin:18px 0 55px;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:1px 0 var(--ink),-1px 0 var(--ink),0 1px var(--ink),0 -1px var(--ink)}
     .cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;counter-reset:projects}
@@ -29,11 +31,11 @@
     .telegram-button{display:inline-flex;margin-top:46px;padding:16px 24px;background:var(--red);color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
     .telegram-button:hover{background:#c91017}
     .case img,.case__image{object-fit:contain;object-position:left center}
-    @media(max-width:760px){.container{width:calc(100% - 32px)}.header-inner{flex-direction:column;align-items:stretch}.header-actions{justify-content:space-between;gap:12px}.apply-button{flex:1;justify-content:center}main{padding:60px 0}.cases-grid{grid-template-columns:1fr;gap:42px}}
+    @media(max-width:760px){.container{width:calc(100% - 32px)}.header-inner{flex-direction:column;align-items:stretch}.header-actions{justify-content:space-between;gap:8px;flex-wrap:wrap}.apply-button,.contact-button{flex:1;justify-content:center}.back{width:100%;text-align:center}main{padding:60px 0}.cases-grid{grid-template-columns:1fr;gap:42px}}
   </style>
 </head>
 <body>
-  <header><div class="container header-inner"><a class="brand" href="index.html"><img src="rok-leasing-logo.jpg" alt="Логотип РОК-ЛИЗИНГ"><span>РОК-ЛИЗИНГ<small>ЛИЗИНГ ПО ВАШИМ ПРАВИЛАМ</small></span></a><div class="header-actions"><a class="apply-button" href="index.html#request">Подать заявку →</a><a class="back" href="index.html#cases">← На главную</a></div></div></header>
+  <header><div class="container header-inner"><a class="brand" href="index.html"><img src="rok-leasing-logo.jpg" alt="Логотип РОК-ЛИЗИНГ"><span>РОК-ЛИЗИНГ<small>ЛИЗИНГ ПО ВАШИМ ПРАВИЛАМ</small></span></a><div class="header-actions"><a class="apply-button" href="index.html#request">Подать заявку →</a><a class="contact-button" href="https://t.me/rockleasing" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram">Telegram</a><a class="contact-button" href="https://max.ru/u/f9LHodD0cOJPvlp0VBlNn9YOTiJM2QaoNQLh-k1BKUKkpNs5r4ZUwkQ7n7o" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX">MAX</a><a class="back" href="index.html#cases">← На главную</a></div></div></header>
   <main><div class="container"><p class="eyebrow">РОК-ЛИЗИНГ · ПРОЕКТЫ 01–10</p><h1>РЕАЛИЗОВАННЫЕ<br><span style="color:var(--red)">СДЕЛКИ</span></h1>
     <div class="cases-grid">
       <a class="case" href="https://t.me/rockleasing/13" target="_blank" rel="noopener noreferrer"><img src="case-images/case-13.jpg" alt="Производственное оборудование"><h2>Металлообрабатывающие центры</h2><p class="meta">2 СТАНКА · 104 000 $ · 30% АВАНС · 3 ГОДА</p><p class="desc">Для производства промышленной оснастки срочно закупили два высокопроизводительных станка. Согласовали поставку, доставку, монтаж и запуск за одну неделю.</p></a>

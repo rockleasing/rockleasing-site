@@ -90,6 +90,20 @@
     nav a:hover { color: var(--red); }
     .nav__phone { font-weight: 700; color: var(--ink); white-space: nowrap; }
     .nav__phone small { display: block; font-weight: 400; color: var(--muted); text-align: right; font-size: 10px; }
+    .contact-links { display: flex; align-items: center; gap: 8px; }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .contact-link:hover { border-color: var(--red); color: var(--red); }
 
     .hero {
       overflow: hidden;
@@ -325,18 +339,21 @@
     input:focus, textarea:focus { border-color: var(--red); box-shadow: 0 0 0 2px rgba(237,28,36,.12); }
     textarea { min-height: 98px; resize: vertical; }
     form .button { width: fit-content; }
-    .form-message { display: none; color: #1c7b43; font-size: 13px; margin: 0; grid-column: 1 / -1; }
-
     footer { background: var(--ink); color: var(--white); padding: 40px 0; }
     .footer__inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
     .footer__details { color: #9c9c9c; font-size: 12px; text-align: right; }
-    .footer__details a { color: var(--white); font-size: 18px; font-weight: 800; display: block; margin-bottom: 4px; }
+    .footer__details > a { color: var(--white); font-size: 18px; font-weight: 800; display: block; margin-bottom: 4px; }
+    .footer__details span a { color: inherit; font-size: inherit; font-weight: inherit; display: inline; margin: 0; }
+    .footer__contact-links { justify-content: flex-end; margin: 10px 0; }
+    .footer__contact-links .contact-link { border-color: #55595d; color: var(--white); font-size: 10px; }
+    .footer__contact-links .contact-link:hover { border-color: var(--white); color: var(--white); }
 
     @media (max-width: 800px) {
       .container { width: min(100% - 32px, 600px); }
       nav { display: none; }
-      .nav { height: 68px; }
+      .nav { height: auto; min-height: 68px; padding: 8px 0; gap: 12px; }
       .nav__phone small { display: none; }
+      .nav__contact-links { margin-left: auto; }
       .hero__grid, .form-wrap { grid-template-columns: 1fr; gap: 40px; }
       .hero__grid { padding: 70px 0 90px; }
       .hero__visual { min-height: auto; }
@@ -354,9 +371,12 @@
       section { padding: 70px 0; }
       .footer__inner { align-items: start; flex-direction: column; }
       .footer__details { text-align: left; }
+      .footer__contact-links { justify-content: flex-start; }
     }
     @media (max-width: 480px) {
       .topbar__inner span:last-child { display: none; }
+      .nav__phone { display: none; }
+      .nav__contact-links .contact-link { padding: 7px 8px; font-size: 9px; }
       h1 { font-size: 55px; }
       .hero__lead { font-size: 16px; }
       form { grid-template-columns: 1fr; }
@@ -556,6 +576,10 @@
         <a href="#reviews">Отзывы</a>
         <a href="#request">Заявка</a>
       </nav>
+      <div class="nav__contact-links contact-links" aria-label="Связаться в мессенджерах">
+        <a class="contact-link" href="https://t.me/rockleasing" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram">Telegram</a>
+        <a class="contact-link" href="https://max.ru/u/f9LHodD0cOJPvlp0VBlNn9YOTiJM2QaoNQLh-k1BKUKkpNs5r4ZUwkQ7n7o" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX">MAX</a>
+      </div>
       <a class="nav__phone" href="tel:+79272173685">
         <small>Связаться напрямую</small>
         8 927 217 36 85
@@ -713,7 +737,11 @@
           <h2 class="section-title" style="margin-top:22px">Расскажите<br>о задаче</h2>
           <p class="form-intro">Оставьте контакты — я свяжусь с вами, уточню детали и подготовлю предварительный расчёт.</p>
         </div>
-                <form id="request-form">
+                <form id="request-form" action="https://formsubmit.co/rockleasing@yandex.ru" method="POST">
+          <input type="hidden" name="_subject" value="Новая заявка на лизинг с сайта РОК-ЛИЗИНГ">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://rockleasing.ru/#request">
           <label>Ваше имя<input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required></label>
           <label>Номер телефона<input type="tel" name="phone" placeholder="+7 999 000 00 00" autocomplete="tel" required></label>
           <label>ИНН организации или ИП<input type="text" name="inn" placeholder="10 или 12 цифр" inputmode="numeric" minlength="10" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" required></label>
@@ -721,7 +749,6 @@
           <label class="consent-check"><input type="checkbox" name="business_consent" required><span>Я даю отдельное <a href="consent-business.html" target="_blank" rel="noopener noreferrer" aria-label="Открыть согласие представителя организации или ИП">согласие представителя организации/ИП</a> на обработку и передачу данных для подбора и сравнения предложений.</span></label>
           <p class="privacy-note">Порядок обработки и защиты данных описан в <a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="Открыть политику обработки персональных данных">Политике обработки персональных данных</a>.</p>
           <button class="button button--red" type="submit">Получить консультацию <span>→</span></button>
-          <p class="form-message" role="status">Спасибо! Заявка отправлена. Ответ поступит в ближайшее время.</p>
         </form>
       </div>
     </section>
@@ -735,20 +762,17 @@
       </a>
       <div class="footer__details">
       <a href="tel:+79272173685">8 927 217 36 85</a>
-      <span>rockleasing@yandex.ru · ИНН 632207938314</span><br>
+      <span><a href="mailto:rockleasing@yandex.ru">rockleasing@yandex.ru</a> · ИНН 632207938314</span>
+      <div class="footer__contact-links contact-links" aria-label="Связаться в мессенджерах">
+        <a class="contact-link" href="https://t.me/rockleasing" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram">Telegram</a>
+        <a class="contact-link" href="https://max.ru/u/f9LHodD0cOJPvlp0VBlNn9YOTiJM2QaoNQLh-k1BKUKkpNs5r4ZUwkQ7n7o" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX">MAX</a>
+      </div>
+      <br>
       <span><a class="footer__link" href="privacy.html">Политика конфиденциальности</a> · <a class="footer__link" href="consent-business.html">Согласие для организаций и ИП</a></span><br>
       <span>© 2026 РОК-ЛИЗИНГ · Информация не является публичной офертой</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('request-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      this.querySelector('.form-message').style.display = 'block';
-      this.querySelector('button').disabled = true;
-      this.querySelector('button').style.opacity = '.65';
-    });
-  </script>
 </body>
 </html>
