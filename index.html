@@ -743,13 +743,16 @@
           <p class="form-intro">Оставьте контакты — я свяжусь с вами, уточню детали и подготовлю предварительный расчёт.</p>
         </div>
               <form action="https://api.web3forms.com/submit" method="POST" id="request-form">
-    <input type="hidden" name="access_key" value="0e8a32be-b440-4fc5-bb57-417f5a3dabf2">
+     <input type="hidden" name="access_key" value="0e8a32be-b440-4fc5-bb57-417f5a3dabf2">
+
     <label>Ваше имя<input type="text" name="Имя" placeholder="Как к вам обращаться" autocomplete="name" required></label>
     <label>Номер телефона<input type="tel" name="Телефон" placeholder="+7 999 000 00 00" autocomplete="tel" required></label>
     <label>ИНН организации или ИП<input type="text" name="ИНН" placeholder="10 или 12 цифр" inputmode="numeric" minlength="10" maxlength="12"></label>
     <label>Что хотите приобрести? <span class="optional">описание имущества, стоимость, год выпуска, аванс, срок и т.д.</span><textarea name="Что приобрести"></textarea></label>
+    
     <label class="consent-check"><input type="checkbox" name="Согласие на обработку данных" required><span>Я даю отдельное <a href="consent-business.html" target="_blank" rel="noopener noreferrer">согласие</a>...</span></label>
     <p class="privacy-note">Порядок обработки и защиты данных описан в <a href="privacy.html" target="_blank" rel="noopener noreferrer">Политике конфиденциальности</a></p>
+    
     <button class="button button--red" type="submit">Получить консультацию <span>→</span></button>
 </form>
 
