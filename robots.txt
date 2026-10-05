@@ -1,4 +1,12 @@
+User-agent: Googlebot
+Allow: /
+Sitemap: https://rockleasing.ru/sitemap_google.xml
+
+User-agent: Yandex
+Allow: /
+Sitemap: https://rockleasing.ru/sitemap_yandex.xml
+
 User-agent: *
 Allow: /
+Sitemap: https://rockleasing.ru/sitemap_google.xml
 
-Sitemap: https://rockleasing.ru
