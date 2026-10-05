@@ -778,22 +778,22 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('request-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      this.querySelector('.form-message').style.display = 'block';
-      this.querySelector('button').disabled = true;
-      this.querySelector('button').style.opacity = '.65';
-    });
-  <script>
+<script>
   const form = document.getElementById('request-form');
-  const formMessage = document.querySelector('.form-message');
+  const formMessage = form.querySelector('.form-message');
+  const submitButton = form.querySelector('button[type="submit"]');
 
   // Скрываем сообщение «Спасибо» по умолчанию при загрузке страницы
   if (formMessage) formMessage.style.display = 'none';
 
   form.addEventListener('submit', async function(event) {
     event.preventDefault(); // Блокируем стандартную перезагрузку страницы
+    
+    // Визуально блокируем кнопку сразу после клика, чтобы избежать повторных отправлений
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.style.opacity = '.65';
+    }
     
     const data = new FormData(event.target);
     
@@ -805,19 +805,27 @@
       });
       
       if (response.ok) {
-        form.reset(); // Очищаем поля формы
+        form.reset(); // Очищаем поля формы после успешной отправки
         if (formMessage) {
-          formMessage.style.display = 'block'; // Показываем сообщение об успешной отправке
+          formMessage.style.display = 'block'; // Показываем сообщение об успехе
           formMessage.style.color = 'green';
         }
       } else {
         alert('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.');
+        // Разблокируем кнопку, если произошла ошибка, чтобы пользователь мог отправить еще раз
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.style.opacity = '1';
+        }
       }
     } catch (error) {
       alert('Ошибка сети. Проверьте интернет-соединение.');
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.style.opacity = '1';
+      }
     }
   });
 </script>
-
 </body>
 </html>
