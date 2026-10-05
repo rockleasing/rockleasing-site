@@ -557,7 +557,64 @@
     .cases .case__image {
       object-fit: contain;
       object-position: left center;
-    }</style>
+    }
+      /* Адаптивность для мобильных телефонов (экраны до 768px) */
+  @media screen and (max-width: 768px) {
+    /* 1. Исправление верхней плашки (Лизинговый брокер...) */
+    .topbar__inner {
+      flex-direction: column !important;
+      gap: 5px !important;
+      text-align: center !important;
+      padding: 5px !important;
+    }
+    .topbar__inner span {
+      font-size: 12px !important;
+    }
+
+    /* 2. Починка шапки сайта и меню навигации */
+    header, .header, [class*="header"], [class*="nav"] { 
+      flex-direction: column !important;
+      align-items: center !important;
+      height: auto !important;
+      padding: 10px !important;
+    }
+
+    /* Заставляем ссылки меню переноситься на новую строку, а не уходить вбок */
+    header nav, .nav, [class*="menu"], [class*="list"] {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      margin: 10px 0 !important;
+      padding: 0 !important;
+    }
+
+    header a, .nav a, [class*="menu"] a, [class*="list"] a {
+      font-size: 14px !important;
+      padding: 4px 6px !important;
+    }
+
+    /* 3. Защита от глобального съезжания страниц (убираем полосу прокрутки вбок) */
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    /* 4. Перестраиваем все колонки и сетки (кейсы, направления) в один столбец */
+    .row, .grid, .flex, [class*="container"], [class*="row"], [class*="grid"] { 
+      flex-direction: column !important;
+      display: flex !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Адаптируем картинки и карточки */
+    img, .cases__case_image {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+</style>
 </head>
 <body>
   <div class="topbar">
